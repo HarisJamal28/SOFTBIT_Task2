@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: grey;
+  overflow-x: hidden;
+}
+
+nav {
+  border: 0px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(255, 61, 61);
+}
+nav span {
+  color: white;
+}
+nav h1 {
+  margin: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-style: oblique;
+  animation: spin 2s;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: white;
+}
+nav ul li {
+  margin: 20px;
+  animation: entry 2s;
+}
+
+.Underbar {
+  position: absolute;
+  top: 9%;
+  background-color: rgb(219, 2, 2);
+  color: white;
+  width: 100%;
+  z-index: 1;
+}
+.Underbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 13px;
+  width: 50%;
+}
+.Underbar ul li {
+  margin: 10px;
+  margin-left: 5%;
+}
+.Underbar ul li:hover {
+  cursor: pointer;
+}
+
+.Banner {
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  animation: entrysection 2s;
+}
+.Banner aside {
+  width: 30%;
+  height: auto;
+  animation: SPIN 2s;
+}
+.Banner aside img {
+  width: 100%;
+  height: 100%;
+  rotate: -20deg;
+}
+
+.Products {
+  margin-top: 10%;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.Products .Title {
+  position: absolute;
+  background-color: rgb(255, 61, 61);
+  padding: 10px;
+  top: -10px;
+  left: 9%;
+  z-index: 1;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.Products .Selection {
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.Products .Selection aside {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  position: relative;
+  animation: SPIN 2s, 6s;
+}
+.Products .Selection aside:hover {
+  transition: 1s ease-in-out;
+  transform: rotateY(180deg);
+}
+.Products .Selection aside img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes spin {
+  from {
+    color: white;
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes entry {
+  from {
+    transform: translate(1000px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+@keyframes entrysection {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+@keyframes SPIN {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    animation-delay: 3s;
+    transform: rotateX(360deg);
+  }
+}
+@keyframes Appear {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav ul {
+    font-size: 0.8rem;
+  }
+  .Selection {
+    background-color: rgb(254, 92, 92);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .Selection aside {
+    max-width: 200px;
+    animation: SPIN 2s;
+  }
+  .Selection aside img {
+    height: 100%;
+    width: 100%;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
